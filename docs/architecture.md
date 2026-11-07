@@ -189,3 +189,4 @@ Uplift-DRL forms the causal core of the quick-commerce operating architecture:
 2. **Causal Audience Scoring:** Scores the entire active customer base, excluding Sleeping Dogs and non-responders.
 3. **Downstream RecSys Amplification:** Passes the selected high-uplift Persuadable customer IDs to `BasketGNN`, which boosts inventory-aware cross-sell items specifically for shoppers primed to convert.
 4. **Autonomous P&L Feedback:** Feeds campaign-level conversion lift back into commercial planning dashboards.
+

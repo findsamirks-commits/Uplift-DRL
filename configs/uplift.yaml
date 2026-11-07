@@ -27,3 +27,4 @@ targeting:
   default_margin: 120.0
   min_uplift: 0.015
   exclude_sleeping_dogs: true
+

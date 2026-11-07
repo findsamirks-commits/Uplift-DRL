@@ -114,3 +114,4 @@ class StandardUpliftLoss(nn.Module):
     def forward(self, y_pred: torch.Tensor, y_true: torch.Tensor) -> Tuple[torch.Tensor, Dict[str, float]]:
         loss = F.binary_cross_entropy(y_pred, y_true)
         return loss, {"loss_total": float(loss.item())}
+

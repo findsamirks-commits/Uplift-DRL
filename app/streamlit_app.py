@@ -299,3 +299,4 @@ with tab_table:
 
     csv_data = filtered_df.to_csv(index=False).encode("utf-8")
     st.download_button("📥 Export Scored Audience CSV", data=csv_data, file_name="targeted_audience.csv", mime="text/csv")
+

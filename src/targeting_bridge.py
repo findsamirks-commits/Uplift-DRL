@@ -205,3 +205,4 @@ class TargetingBridge:
             })
 
         return pd.DataFrame(rows)
+

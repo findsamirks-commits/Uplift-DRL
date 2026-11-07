@@ -118,3 +118,4 @@ if __name__ == "__main__":
     print(f"Scored {len(scored)} records. Output saved to: {args.output}")
     print("\nCohort distribution:")
     print(scored["cohort"].value_counts().to_string())
+

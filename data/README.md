@@ -68,3 +68,4 @@ All loaders produce a standardized `.npz` archive consumed by `src.train` and `s
 - `Y_train`, `Y_val`, `Y_test`: Binary observed outcome (`float32`, shape `[N, 1]`)
 - `feature_names`: Array of string column names
 - `true_ite_test` (optional for synthetic): Known counterfactual \(Y^{(1)} - Y^{(0)}\) for evaluation
+

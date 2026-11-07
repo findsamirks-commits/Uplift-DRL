@@ -7,3 +7,4 @@ and an enterprise quick-commerce targeting bridge.
 
 __version__ = "1.0.0"
 __author__ = "Samir Sandhwar"
+

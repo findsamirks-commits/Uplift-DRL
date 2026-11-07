@@ -276,3 +276,4 @@ if __name__ == "__main__":
     print(f" AUUC Score       : {auuc:.4f}")
     print("\nDecile Summary Table:")
     print(deciles.to_string(index=False))
+

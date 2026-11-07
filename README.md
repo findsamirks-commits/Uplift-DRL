@@ -1,14 +1,36 @@
-# Uplift-DRL — Deep Causal Learning for Promo Targeting
+# Uplift-DRL 🎯🧠
+**Deep Causal Learning & CATE Estimation for Retail Promo Targeting — powered by DragonNet, TARNet & Targeted Regularization.**
 
-> **Answer the real question**: *"Which customers will convert **only if** given a promo — and which would have converted anyway?"*
->
-> Four PyTorch models (S-Learner, T-Learner, TARNet, DragonNet) estimating **Conditional Average Treatment Effect (CATE)** on retail promo campaigns, with a budget-aware targeting bridge for live quick-commerce deployment.
-
-[![PyTorch](https://img.shields.io/badge/PyTorch-2.1+-EE4C2C?logo=pytorch&logoColor=white)](https://pytorch.org/)
-[![Python](https://img.shields.io/badge/Python-3.10+-3776AB?logo=python&logoColor=white)](https://www.python.org/)
-[![Streamlit](https://img.shields.io/badge/Streamlit-Demo-FF4B4B?logo=streamlit&logoColor=white)](https://streamlit.io/)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://uplift-drl.streamlit.app)
+[![GitHub](https://img.shields.io/badge/GitHub-findsamirks--commits-black?style=flat&logo=github)](https://github.com/findsamirks-commits/Uplift-DRL)
+[![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python)](https://python.org)
+[![PyTorch](https://img.shields.io/badge/PyTorch-2.1%2B-EE4C2C?logo=pytorch)](https://pytorch.org)
 [![Causal CATE](https://img.shields.io/badge/Causal_CATE-DragonNet-9146FF?style=flat&logo=pytorch&logoColor=white)](https://github.com/findsamirks-commits/Uplift-DRL)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
+> 🌐 **Live Interactive Streamlit Demo:** [uplift-drl.streamlit.app](https://uplift-drl.streamlit.app)
+
+---
+
+## 📖 About Uplift-DRL
+
+**Uplift-DRL** is an enterprise-grade deep causal machine learning pipeline designed to answer the single most expensive question in quick-commerce and e-commerce growth merchandising:
+
+> *"Which customers will convert **only if** given a promo — and which would have converted anyway?"*
+
+Rather than predicting standard response propensity \(P(Y=1 \mid X)\) — which routinely wastes marketing budgets on customers who need no discount — Uplift-DRL estimates the **Conditional Average Treatment Effect (CATE)** at individual customer resolution:
+
+\[
+\tau(x) = \mathbb{E}[Y^{(1)} - Y^{(0)} \mid X=x]
+\]
+
+### 🏛️ Core Architectural Pillars
+
+- **Four Unified CATE Estimators:** Modular implementations of **DragonNet** (Shi et al. 2019), **TARNet** (Shalit et al. 2017), **T-Learner**, and **S-Learner** sharing a single `UpliftModel` base class for zero-friction benchmarking.
+- **Double-Robust Targeted Regularization:** Implements the true Targeted Maximum Likelihood Estimation (TMLE) scalar \(\varepsilon\) and clever covariate \(H(t, x)\) to solve the efficient score equation and guarantee double-robust CATE estimation on observational retail data.
+- **Decoupled Commercial TargetingBridge:** Bridges causal ML and commercial P&L by enforcing hard campaign budget ceilings, estimating expected incremental gross margins, and strictly excluding "Sleeping Dogs" (customers where promos trigger unsubscribes or notification fatigue).
+- **Pure-NumPy Diagnostic Engine:** High-performance implementations of Qini Curves, Qini Coefficient, AUUC, Uplift Decile Tables, and Inverse Propensity Weighted (IPW) Expected Policy Value without external causal dependencies.
+- **Autonomous Retail AI Mesh Ready:** Ingests markdown elasticities from `Multi-Agent-Dynamic-Pricing-Swarm` and pushes high-uplift Persuadable shopper cohorts to `BasketGNN` for targeted cross-sell boosts.
 
 ---
 
@@ -245,3 +267,4 @@ MIT — see [LICENSE](LICENSE).
 ---
 
 **Built by [Samir Sandhwar](https://github.com/findsamirks-commits)** — Category Head at Milkbasket, IIT Madras Agentic AI alumnus. Part of the [Autonomous Retail AI Mesh](https://github.com/findsamirks-commits).
+
