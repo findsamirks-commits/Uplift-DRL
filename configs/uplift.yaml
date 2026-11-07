@@ -1,0 +1,29 @@
+# Uplift-DRL Configuration
+model:
+  hidden_dim: 128
+  dropout: 0.2
+  n_layers: 3
+
+dragonnet:
+  alpha: 1.0               # Weight on propensity cross-entropy loss
+  beta: 1.0                # Weight on targeted regularization (clever covariate term)
+  outcome_hidden_dim: 64
+
+tarnet:
+  outcome_hidden_dim: 64
+
+train:
+  lr: 0.001
+  weight_decay: 0.0001
+  batch_size: 512
+  epochs: 50
+  early_stopping_patience: 7
+  val_metric: qini          # 'qini', 'auuc', or 'loss'
+  seed: 42
+
+targeting:
+  default_budget: 50000.0
+  default_cost_per_treatment: 20.0
+  default_margin: 120.0
+  min_uplift: 0.015
+  exclude_sleeping_dogs: true
