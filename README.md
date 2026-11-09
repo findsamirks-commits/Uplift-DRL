@@ -2,6 +2,7 @@
 **Deep Causal Learning & CATE Estimation for Retail Promo Targeting — powered by DragonNet, TARNet & Targeted Regularization.**
 
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://uplift-drl.streamlit.app)
+[![Live Demo](https://img.shields.io/badge/demo-live-FF4B4B?style=flat&logo=streamlit&logoColor=white)](https://uplift-drl.streamlit.app)
 [![GitHub](https://img.shields.io/badge/GitHub-findsamirks--commits-black?style=flat&logo=github)](https://github.com/findsamirks-commits/Uplift-DRL)
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python)](https://python.org)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.1%2B-EE4C2C?logo=pytorch)](https://pytorch.org)
